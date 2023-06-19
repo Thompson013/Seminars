@@ -89,18 +89,18 @@
 //Задача 4. Напишите программу которая принимает на вход число (N) и 
 // выдает на консоль квадраты чисел от 1 до N
 
-void QuadNumber (int x)
-{
-    int count = 1;
-    while (count <= x)
-    {
-        System.Console.WriteLine($"{count} -> {Math.Pow(count, 2)}");
-        count ++;
-    }
-}
-System.Console.WriteLine("Enter a number ");
-int x = Convert.ToInt32(Console.ReadLine());
-QuadNumber(x);
+// void QuadNumber (int x)
+// {
+//     int count = 1;
+//     while (count <= x)
+//     {
+//         System.Console.WriteLine($"{count} -> {Math.Pow(count, 2)}");
+//         count ++;
+//     }
+// }
+// System.Console.WriteLine("Enter a number ");
+// int x = Convert.ToInt32(Console.ReadLine());
+// QuadNumber(x);
 
 
 
