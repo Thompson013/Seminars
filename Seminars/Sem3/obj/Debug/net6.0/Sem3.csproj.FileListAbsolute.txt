@@ -1,0 +1,15 @@
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\bin\Debug\net6.0\Sem3.exe
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\bin\Debug\net6.0\Sem3.deps.json
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\bin\Debug\net6.0\Sem3.runtimeconfig.json
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\bin\Debug\net6.0\Sem3.dll
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\bin\Debug\net6.0\Sem3.pdb
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\Sem3.csproj.AssemblyReference.cache
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\Sem3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\Sem3.AssemblyInfoInputs.cache
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\Sem3.AssemblyInfo.cs
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\Sem3.csproj.CoreCompileInputs.cache
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\Sem3.dll
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\refint\Sem3.dll
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\Sem3.pdb
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\Sem3.genruntimeconfig.cache
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem3\obj\Debug\net6.0\ref\Sem3.dll
