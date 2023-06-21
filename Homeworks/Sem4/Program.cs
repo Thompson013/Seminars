@@ -18,22 +18,55 @@
 // int b = Convert.ToInt32(Console.ReadLine());
 // System.Console.WriteLine($"{a}, {b} -> {DegreeNumber(a, b)}");
 
-// Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// Задача 27. Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
 
-int SumDigits(int a)
-{
-    int current = 0;
-    for (int i = 1; a < 0; i++)
-    {
-        a = a % 10;
-        current = i;
-    }
-    return current;
-}
+// int SumDigits(int a)
+// {
+//     int sum = 0;
+//     while (a != 0)
+//     {
+//         sum = sum + a % 10;
+//         a = a / 10;
+//     }
+//     return sum;
+// }
 
-System.Console.WriteLine("Enter a number ");
-int a = Convert.ToInt32(Console.ReadLine());
-System.Console.WriteLine($"{a} -> {SumDigits(a)}");
+// System.Console.WriteLine("Enter a number ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine($"{a} -> {SumDigits(a)}");
+
+// Задача 29. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+// int[] CreateRandomArray(int size, int minValue, int maxValue)
+// {
+//     int[] array = new int[size];
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = new Random().Next(minValue, maxValue + 1);
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// System.Console.WriteLine("Enter array size ");
+// int size = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Enter minimal value of array element: ");
+// int minValue = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Enter maximal value of array element: ");
+// int maxValue = Convert.ToInt32(Console.ReadLine());
+
+// PrintArray(CreateRandomArray(size, minValue, maxValue));
+
