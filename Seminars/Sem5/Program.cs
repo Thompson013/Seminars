@@ -42,7 +42,7 @@
 // System.Console.WriteLine("Enter maximal value of array element: ");
 // int maxValue = Convert.ToInt32(Console.ReadLine());
 
-// int[] myArray = CreateRandomArray(size, maxValue, maxValue);
+// int[] myArray = CreateRandomArray(size, minValue, maxValue);
 
 // PrintArray(myArray);
 // PosNegSum(myArray);
