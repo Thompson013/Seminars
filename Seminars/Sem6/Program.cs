@@ -48,18 +48,63 @@
 // PrintArray(myArray);
 
 // Написать метод, который переводит число в двоичную систему исчисления.
-string DecimalToBinary(int num)
+// string DecimalToBinary(int num)
+// {
+//     string result = string.Empty;
+//     while(num > 0)
+//     {
+//         result = num % 2 + result;
+//         num = num / 2;
+//     }
+//     return result;
+// }
+
+// System.Console.WriteLine("Enter number ");
+// int num = Convert.ToInt32(Console.ReadLine());
+
+// System.Console.WriteLine($"NUmber {num} in binary system -> {DecimalToBinary(num)}");
+
+//Задача 3. Не используя рекурсию, выведите первые N чисел Фибоначчи. Первые два числа Фибоначчи: a и b.
+//числа фибоначчи последовательность чисел в которой первые 2 числа это 0 и 1, 
+// а последубщие это сумма двух передыдущих
+//[0, 1,2, 3, 5, 8, 13, ... ]
+
+// int[] FibonacciNumbers(int size, int a, int b)
+// {
+//     int[] array = new int[size];
+//     array[0] = a;
+//     array[1] = b;
+//     for (int i = 2; i < array.Length; i++)
+//     {
+//         array[i] = array[(i - 1)] + array[(i - 2)];
+//     }
+//     return array;
+// }
+
+// void PrintArray(int[] array)
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         System.Console.Write(array[i] + " ");
+//     }
+//     System.Console.WriteLine();
+// }
+
+// System.Console.WriteLine("Enter num a: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// System.Console.WriteLine("Enter num b: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// PrintArray(FibonacciNumbers(10, a, b));
+
+//Задача 2.Напишите программу, которая принимает на вход три числа и проверяет, может ли 
+// существовать треугольник со сторонами такой длины.
+//самое важное знать правило, какждая сторона должна быть меньше(строго) суммы двух других сторон
+
+bool CheckTriangle(int a, int b, int c)
 {
-    string result = string.Empty;
-    while(num > 0)
-    {
-        result = num % 2 + result;
-        num = num / 2;
-    }
-    return result;
+    if (a < b + c && b < a + c && c < a + b) return true;
+    else return false;
 }
 
-System.Console.WriteLine("Enter number ");
-int num = Convert.ToInt32(Console.ReadLine());
-
-System.Console.WriteLine($"NUmber {num} in binary system -> {DecimalToBinary(num)}");
+if (CheckTriangle(4, 5, 6)) System.Console.WriteLine("Triangle with these sides can exist");
+else System.Console.WriteLine("Triangle with these sides can't exist");;
