@@ -88,38 +88,47 @@
 // Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
 // [3.22, 4.2, 1.15, 77.15, 65.2] => 77.15 - 1.15 = 76
 
-Double[] FindArray(double[] array)
+Double[] FindArray(double[] numbers)
 {
-    double[] RandomArray = new double[number];
-    Random rnd = new Random();
-        for (int i = 0; i < array.Length; i++)
-    {
-        RandomArray[i] = rnd.NextDouble(minValue, maxValue + 1);
-    }
-    return RandomArray;
+    for (int i = 0; i < numbers.Length; i++)
+        {
+            numbers[i] = Convert.ToDouble(new Random().Next(100, 1000)) / 100;
+        }
+    return numbers;
 }
 
-Double FindMinMAx(double[] array)
+Double FindMinMax(double[] array)
 {
-    double result = 0;
     double min = 0;
     double max = 0;
-
-    for (int i = 0; i < array.length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        if (array[min] > array[i]) min = i;
-        else if (array[max] < array[i]) max = i:
+        if (array[i] > max) max = array[i];
+        if (array[i] < min) min = array[i];
     }
+    return max - min;
 }
 
-// Console.WriteLine("Введите размер массива  ");
-// int size = Convert.ToInt32(Console.ReadLine());
-// double[] numbers = new double[size];
-// FillArrayRandomNumbers(numbers);
-// Console.WriteLine("массив: ");
-// PrintArray(numbers);
-// double min = Int32.MaxValue;
-// double max = Int32.MinValue;
+void PrintArray(double[] numbers)
+{
+    for (int i = 0; i < numbers.Length; i++)
+    {
+        System.Console.Write(numbers[i] + " ");
+    }
+    System.Console.WriteLine();
+}
+Console.WriteLine("Enter array size  ");
+int size = Convert.ToInt32(Console.ReadLine());
+double min = Int32.MinValue;
+double max = Int32.MaxValue;
+double[] numbers = new double[size];
+FindArray(numbers);
+FindMinMax(numbers);
+Console.WriteLine("array is: ");
+PrintArray(numbers);
+System.Console.WriteLine($"Maximal element {max}, minimal element {min}");
+System.Console.WriteLine($"the difference between maximal and minimal elements -> {max - min}");
+
 
 // for (int z = 0; z < numbers.Length; z++)
 // {
