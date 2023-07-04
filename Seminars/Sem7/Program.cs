@@ -55,11 +55,20 @@ int[,] ChangeRows(int[,] array, int row1, int row2)
     return array;
 }
 
-Console.WriteLine("Enter a value of b1");
-double b1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter a value of k1");
-double k1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter a value of b2");
-double b2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter a value of k2");
-double k2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter number of columns: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter minimal value of array element: ");
+int minValue = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter amaximal value of array element: ");
+int maxValue = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Enter a number of row1 to change: ");
+int row1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter a number of row2 to change: ");
+int row2 = Convert.ToInt32(Console.ReadLine());
+
+int[,] myArray = Create2DArray(rows, columns, minValue, maxValue);
+Print2DArray(myArray);
+Print2DArray(ChangeRows(myArray, row1, row2));

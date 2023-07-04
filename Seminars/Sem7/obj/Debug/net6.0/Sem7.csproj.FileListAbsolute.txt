@@ -1,0 +1,5 @@
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem7\obj\Debug\net6.0\Sem7.csproj.AssemblyReference.cache
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem7\obj\Debug\net6.0\Sem7.GeneratedMSBuildEditorConfig.editorconfig
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem7\obj\Debug\net6.0\Sem7.AssemblyInfoInputs.cache
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem7\obj\Debug\net6.0\Sem7.AssemblyInfo.cs
+D:\Прадос\GEEKBRAINS\Разработчик\Урок 1. Знакомство с языком программирования C# (Семинары)\SEMINARS#\Seminars\Sem7\obj\Debug\net6.0\Sem7.csproj.CoreCompileInputs.cache
