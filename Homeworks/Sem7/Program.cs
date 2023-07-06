@@ -12,7 +12,7 @@
 //     {
 //         for (int j = 0; j < columns; j++)
 //         {
-//             array[i, j] = Convert.ToDouble((new Random().Next(100, 1000)) / 100);
+//             array[i, j] = new Random().Next(-99, 100) / 10.0;
 //         }
 //     }
 //     return array;
@@ -47,49 +47,49 @@
 // 5 9 2 3
 // 8 4 2 4
 // 17 -> такого числа в массиве нет
-
-int[,] Create2DArray(int rows, int columns)
+// int rows = 5;
+// int columns = 5;
+int[,] array = new int [5, 5];
+void Create2DArray(int [,] array2D)
 {
-    int[,] array = new int[rows, columns];
-    for (int i = 0; i < rows; i++)
+    for (int i = 0; i < array2D.GetLength(0); i++)
     {
-        for (int j = 0; j < columns; j++)
+        for (int j = 0; j < array2D.GetLength(1); j++)
         {
-            array[i, j] = new Random().Next(1, 9);
+            array[i, j] = new Random().Next(1, 10);
         }
     }
-    return array;
 }
 
-void Print2DArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            System.Console.Write(array[i, j] + " ");
-        }
-        System.Console.WriteLine();
-    }
-    System.Console.WriteLine();
-}
+// void Print2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             System.Console.Write(array[i, j] + " ");
+//         }
+//         System.Console.WriteLine();
+//     }
+//     System.Console.WriteLine();
+// }
 
-void FindElement(int[,] array)
+void FindElementArray(int[,] findelement, int usernumber)
 {
-    int rows = 0;
-    int columns = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
+
+    for (int i = 0; i < findelement.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < findelement.GetLength(1); j++)
         {
-            if (rows < array.GetLength(0) && columns < array.GetLength(1)) 
+            if (findelement[i, j] == usernumber)
             {
-                Console.WriteLine(array[rows, columns]);
+                Console.WriteLine("the meaning of the element ->" + i + "" + j);
             }
             else
             {
-                Console.WriteLine($"{rows}{columns} -> the number doesn't present in array");
-            } 
+                Console.WriteLine("the number doesn't present in the array");
+            }
+            Console.ReadLine(); 
         }
     }
 }
@@ -99,8 +99,7 @@ int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter index of columns: ");
 int columns = Convert.ToInt32(Console.ReadLine());
 
-int[,] myArray = new int[6, 8];
-Create2DArray(rows, columns);
-Print2DArray(myArray);
-FindElement(myArray);
-System.Console.WriteLine($"the meaning of required element -> {myArray}");
+Create2DArray(array);
+// Print2DArray(array);
+FindElementArray(array, usernumber);
+
