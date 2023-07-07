@@ -107,7 +107,6 @@ void Create2DArray(int[,] array2D)
         for (int j = 0; j < array2D.GetLength(1); j++)
         {
             array2D[i, j] = new Random().Next(0, 10);
-            // System.Console.Write(array2D[i, j] + " ");
         }
         System.Console.WriteLine();
     }
@@ -125,26 +124,31 @@ void Print2DArray(int[,]array)
     }
 }
 
-double[] averageNumbers = new double[array.GetLength(1)];
-
-    for (int i = 0; i < array.GetLength(1); i++) 
-    {
-        double result = 0;
-        for (int j = 0; j < array.GetLength(0); j++) 
+double[] GetAverage(int [,] numbers)
+{
+    double[] averageNumbers = new double[numbers.GetLength(1)];
+        for (int j = 0; j < numbers.GetLength(0); j++) 
         {
-           result += array[j, i];
+            double result = 0;
+            for (int i = 0; i < numbers.GetLength(1); i++) 
+            {
+            result += numbers[i, j];
+            }
+            System.Console.WriteLine($"Average number of column #{j} is {result/numbers.GetLength(0)}");
         }
-        averageNumbers[i] = result / array.GetLength(0);
-    }
-    System.Console.WriteLine();
+    return averageNumbers;
+}
 
 Console.WriteLine("Enter number of rows: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter number of columns: ");
 int columns = Convert.ToInt32(Console.ReadLine());
+int[,] numbers = new int[rows, columns];
 
-Create2DArray(array);
-Print2DArray(array);
+
+Create2DArray(numbers);
+Print2DArray(numbers);
+GetAverage(numbers);
 
 
 
