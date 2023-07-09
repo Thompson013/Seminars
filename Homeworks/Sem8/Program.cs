@@ -75,15 +75,17 @@
 // Программа считает сумму элементов в каждой строке и выдаёт номер 
 // строки с наименьшей суммой элементов: 1 строка
 
-void Create2DArray(int[,] array2D)
+int[,] Create2DArray(int m, int n)
 {
-    for (int i = 0; i <array2D.GetLength(0); i++)
+    int[,] array = new int[m, n];
+    for (int i = 0; i <m; i++)
     {
-        for (int j = 0; j < array2D.GetLength(1); j++)
+        for (int j = 0; j < n; j++)
         {
-            array2D[i, j] = new Random().Next(1, 10);
+            array[i, j] = new Random().Next(1, 10);
         }
     }
+    return array;
 }
 
 void Print2DArray(int[,] array)
@@ -98,32 +100,42 @@ void Print2DArray(int[,] array)
     }
 }
 
-int[] FindMinRow(int [,] numbers)
+int FindMinRow(int [,] array)
 {
-    int[] rowSum = new int[numbers.GetLength(0)];
-    for (int i = 0; i < numbers.GetLength(0); i++) 
+    int row = 0;
+    int minsum = 0;
+        for (int i = 0; i < array.GetLength(1); i++) 
         {
-            for (int j = 0; j < numbers.GetLength(1); j++)
+            minsum = minsum + array[0, i];
+        }
+        for (int i = 1; i < array.GetLength(0); i++)
+        {
+            int sum = 0;
+            for (int j = 0; j < array.GetLength(1); j++)
             {
-                rowSum[i] += numbers[i, j];
+                sum = sum + array[i, j];
             }
-            System.Console.WriteLine($"{i + 1} -> {rowSum[i]}");  
+            if(minsum > sum)
+            {
+                minsum = sum;
+                row = i;
+            }
         }
-    int minRowSum = rowSum[0];
-    int minRow = 1;
-    for (int i = 0; i < numbers.GetLength(0); i++)
-    {
-        if (rowSum[i] < minRowSum)
-        {
-            minRowSum = rowSum[i];
-            minRow = i + 1;
-        }
-    }
-    return minRow;
+        return row;
 }
 
-int[,] array = new int[4, 4];
-Create2DArray(array);
+Console.WriteLine("Enter number of rows: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter number of columns: ");
+int columns = Convert.ToInt32(Console.ReadLine());
+int[,] array = Create2DArray(rows, columns);
 Print2DArray(array);
-FindMinRow(array);
-System.Console.WriteLine($"Less sum in {row} line");
+
+Console.WriteLine($"Row with the less sum - {FindMinRow(array)}");
+
+
+            
+            
+                         
+  
+
