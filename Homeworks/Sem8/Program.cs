@@ -75,63 +75,103 @@
 // Программа считает сумму элементов в каждой строке и выдаёт номер 
 // строки с наименьшей суммой элементов: 1 строка
 
-int[,] Create2DArray(int m, int n)
-{
-    int[,] array = new int[m, n];
-    for (int i = 0; i <m; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            array[i, j] = new Random().Next(1, 10);
-        }
-    }
-    return array;
-}
+// int[,] Create2DArray(int m, int n)
+// {
+//     int[,] array = new int[m, n];
+//     for (int i = 0; i <m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             array[i, j] = new Random().Next(1, 10);
+//         }
+//     }
+//     return array;
+// }
 
-void Print2DArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write($"{array[i, j]} ");
-        }
-        System.Console.WriteLine();
-    }
-}
+// void Print2DArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write($"{array[i, j]} ");
+//         }
+//         System.Console.WriteLine();
+//     }
+// }
 
-int FindMinRow(int [,] array)
-{
-    int row = 0;
-    int minsum = 0;
-        for (int i = 0; i < array.GetLength(1); i++) 
-        {
-            minsum = minsum + array[0, i];
-        }
-        for (int i = 1; i < array.GetLength(0); i++)
-        {
-            int sum = 0;
-            for (int j = 0; j < array.GetLength(1); j++)
-            {
-                sum = sum + array[i, j];
-            }
-            if(minsum > sum)
-            {
-                minsum = sum;
-                row = i;
-            }
-        }
-        return row;
-}
+// int FindMinRow(int [,] array)
+// {
+//     int row = 0;
+//     int minsum = 0;
+//         for (int i = 0; i < array.GetLength(1); i++) 
+//         {
+//             minsum = minsum + array[0, i];
+//         }
+//         for (int i = 1; i < array.GetLength(0); i++)
+//         {
+//             int sum = 0;
+//             for (int j = 0; j < array.GetLength(1); j++)
+//             {
+//                 sum = sum + array[i, j];
+//             }
+//             if(minsum > sum)
+//             {
+//                 minsum = sum;
+//                 row = i;
+//             }
+//         }
+//         return row;
+// }
 
-Console.WriteLine("Enter number of rows: ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Enter number of columns: ");
-int columns = Convert.ToInt32(Console.ReadLine());
-int[,] array = Create2DArray(rows, columns);
-Print2DArray(array);
+// Console.WriteLine("Enter number of rows: ");
+// int rows = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter number of columns: ");
+// int columns = Convert.ToInt32(Console.ReadLine());
+// int[,] array = Create2DArray(rows, columns);
+// Print2DArray(array);
 
-Console.WriteLine($"Row with the less sum - {FindMinRow(array)}");
+// Console.WriteLine($"Row with the less sum - {FindMinRow(array)}");
+
+// Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.
+// Например, на выходе получается вот такой массив:
+// 01 02 03 04
+// 12 13 14 05
+// 11 16 15 06
+// 10 09 08 07
+
+// int[,] Spiral(int n)
+// {
+// int[,] myArray = new int [n, n];
+
+// int pos = 1;
+// int count = n;
+// int value = -n;
+// int sum = -1;
+
+// while (count > 0)
+// {
+// value = -1 * value / n;
+// for (int i = 0; i < count; i++)
+// {
+// sum += value;
+// myArray[sum / n, sum % n] = pos++;
+// }
+// value *= n;
+// count--;
+// for (int i = 0; i < count; i++)
+// {
+// sum += value;
+// myArray[sum / n, sum % n] = pos++;
+// }
+// }
+
+// return myArray;
+// }
+
+
+
+
 
 
             
